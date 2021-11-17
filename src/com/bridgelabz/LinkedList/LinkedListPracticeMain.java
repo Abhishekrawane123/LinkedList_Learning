@@ -7,8 +7,11 @@ public class LinkedListPracticeMain {
 	public static void main(String[] args) {
 
 		LinkedListPractice linkedListPractice = new LinkedListPractice();
-		linkedListPractice.toPrint();
-
+//		linkedListPractice.toPrint();
+//		linkedListPractice.add(60);
+//		linkedListPractice.add(20);
+//		linkedListPractice.add(30);
+		Scanner scanner = new Scanner(System.in);
 		UserInterface userInterface = new UserInterface();
 		while (true) {
 		int num = userInterface.showUserMenu();
@@ -19,7 +22,6 @@ public class LinkedListPracticeMain {
 			case 2 : 
 				linkedListPractice.push(userInterface.inputData());
 			case 3:
-				Scanner scanner = new Scanner(System.in);
 				System.out.println("enter insert position : ");
 				int positiont = scanner.nextInt();
 				System.out.println("enter insert value : ");
@@ -35,6 +37,13 @@ public class LinkedListPracticeMain {
 				break;
 			case 6 :
 				System.out.println("isFound the element " + linkedListPractice.toSearch(userInterface.inputData()));
+				break;
+			case 7 :
+				System.out.println("enter search value : ");
+				int searchElement = scanner.nextInt();
+				System.out.println("enter insert value : ");
+				int data = scanner.nextInt();
+				linkedListPractice.insertAfterSearch(searchElement, data);
 			}
 			if(num==0) {
 				break;

@@ -31,6 +31,12 @@ public class LinkedListPractice {
 		}
 		return isAdded;		
 	}
+	
+	public void push(int data) {
+		Node newNode = new Node(data);
+		newNode.next = head;
+		head = newNode;
+	}
 
 	public void toPrint() {
 		if(head==null) {

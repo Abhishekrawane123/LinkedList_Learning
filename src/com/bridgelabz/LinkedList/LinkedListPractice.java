@@ -1,6 +1,5 @@
 package com.bridgelabz.LinkedList;
 
-
 public class LinkedListPractice {
 
 	private Node head;
@@ -122,6 +121,29 @@ public class LinkedListPractice {
 			toPrint();
 		} else
 			System.out.println("insertion not possible becouse search element not matched ");
+	}
+	
+	public boolean delete(int element) {
+		
+		if(!toSearch(element)) {
+			System.out.println("search element not found");
+			return false;
+		}
+		Node temp = head;
+		Node prev = null;
+		if(temp != null && temp.key==element) {
+			head = temp.next;
+			return true;
+		}
+		while(temp !=null) {
+			if(temp.key == element) {
+				prev.next = temp.next;
+				return true;
+			}
+			prev = temp;
+			temp = temp.next;
+		}
+		return false;
 	}
 
 	public void toPrint() {

@@ -12,6 +12,10 @@ public class LinkedListPracticeMain {
 
 		linkedListPractice.insertAtPosition(3,30);
 		linkedListPractice.toPrint();
+		
+		System.out.println("Deleted key is : " + linkedListPractice.pop());
+		linkedListPractice.toPrint();
+
 	}
 
 }

@@ -58,6 +58,17 @@ public class LinkedListPractice {
 		}
 	}
 
+	public int pop() {
+		
+		if(head==null) {
+			System.out.println("delation is not possible becouse empty list");
+		}
+		Node temp = head;
+		head = temp.next;
+		
+		return temp.key;
+	}
+	
 	public void toPrint() {
 		if(head==null) {
 			System.out.println("linkedList is empty");

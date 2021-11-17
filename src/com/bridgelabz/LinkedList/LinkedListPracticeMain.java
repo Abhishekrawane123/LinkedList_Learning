@@ -15,7 +15,9 @@ public class LinkedListPracticeMain {
 		
 		System.out.println("Deleted key is : " + linkedListPractice.pop());
 		linkedListPractice.toPrint();
-
+		
+		System.out.println("Deleted last key is : " + linkedListPractice.popLast());
+		linkedListPractice.toPrint();
 	}
 
 }
